@@ -4,7 +4,6 @@ The primary stylesheet for the Flexbox Holy Grail layout demo web page. This she
 
 @import url('CSS/reset.css');
 @import url('CSS/accessibility.css');
-/*@import url('CSS/layout.css'); */
 @import url('CSS/typography.css');
 @import url('CSS/card-styles.css');
 @import url('CSS/all-together.css');
