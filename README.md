@@ -1,3 +1,3 @@
 # doggie-walks
 
-## live version: https://elenag518.github.io/doggie-walks/
+## live version: http://my-doggie-walks.fun
