@@ -260,7 +260,7 @@
     <img src="images/cropped/meanddoggies.jpg" alt="me and doggies" class="contact-photo">
     <p>Elena's Dog Walking & Pet Sitting Service<br>
     Mar Vista, CA <br>
-    Voice/text: 310-384-6767 <br>
+    310-384-6767 <br>
     <a href="mailto:elenag518@gmail.com">elenaG518@gmail.com</a></p>
     </section>`);
   }
