@@ -85,26 +85,9 @@ header {
 
 .main-area {
     padding: 2em 4em;
+    background: url("../images/cropped/paw-print-backgrounds-light-gray.png");
+    background-repeat: repeat;
 }
-
-
-/*.sidebar {
-  background-color: ghostwhite;
-}*/
-
-
-/*.rates {
-  margin: 40px auto;
-    border: 3px solid #de1bcf17;
-    background: radial-gradient(#2196f329, #bcd7e6d1,  #b0c5d0d1);
-    border-radius: 10px;
-    box-shadow: 0 0 5px lightgray;
-  }
-
-  .rates p{
-    text-align: center;
-    margin: 15px;
-  }*/
 
 table {
     min-width: 280px;

@@ -1,10 +1,7 @@
 /* Card Based Layout - Base styles */
 
 body {
-    background: hsl(0, 0%, 90%);
     position: relative;
-    background: url("../images/cropped/paw-print-backgrounds-light-gray.png");
-    background-repeat: repeat;
 }
 
 .card {
