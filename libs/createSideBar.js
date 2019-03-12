@@ -13,7 +13,6 @@
   $('.nav-all-rates').click(function(event) {
     console.log("nav all rates function ran");
     event.preventDefault();
-    // $('.nav-all-rates').addClass('active');
     $('.dropdown').show();
 
   })
@@ -32,9 +31,8 @@
           generateWalkRates();
         };
     };
-    if (window.innerHeight > 620) {
-      window.scrollTo(0, 600);
-    } 
+    console.log("st ", sticky);
+      window.scrollTo(0, sticky);
   };
 
   function walkSection() {
@@ -98,9 +96,8 @@
             generateRunRates();
         };
     };
-    if (window.innerWidth < 420) {
-      window.scrollTo(0, 620);
-    }
+    console.log("st ", sticky);
+      window.scrollTo(0, sticky);
   };
 
   function runSection() {
@@ -163,9 +160,8 @@
           generateHikeRates();
         };
     };
-    if (window.innerWidth < 420) {
-      window.scrollTo(0, 620);
-    }
+    console.log("st ", sticky);
+      window.scrollTo(0, sticky);
   };
 
   function hikeSection() {
@@ -216,11 +212,10 @@
           generateSitRates();
         };
     };
-    if (window.innerWidth < 420) {
-      window.scrollTo(0, 620);
-    } else {
-        window.scrollTo(0,0);
-    }
+    // if (window.innerWidth < 420) {
+      console.log("st ", sticky);
+      window.scrollTo(0, sticky);
+    // }  
   };
 
   function sitSection() {
@@ -294,6 +289,30 @@
     <a href="mailto:elenag518@gmail.com">elenaG518@gmail.com</a></p>
     </section>`);
   }
+
+  // When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+let navbar = document.getElementById("fixed-nav");
+// let content = document.getElementById("content");
+
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+console.log("sticky ", sticky);
+
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+    
+  } else {
+    navbar.classList.remove("sticky");
+    
+  }
+}
 
   
 function createRates() {

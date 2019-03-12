@@ -1,5 +1,9 @@
 /* header styles */
 
+.hide {
+    display: none;
+}
+
 header {
     line-height: 3.5em;
     box-shadow: 1px 1px 5px lightgray;
@@ -104,6 +108,20 @@ ul li ul li {
 
 ul li ul li:hover {
     background-color: rgb(76, 175, 80);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.content {
+    padding: 16px;
+}
+
+.sticky+.content {
+    padding-top: 60px;
 }
 
 
