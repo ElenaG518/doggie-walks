@@ -174,7 +174,7 @@ table caption {
 
 .footfix {
     clear: both;
-    padding-bottom: 240px;
+    padding-bottom: 200px;
 }
 
 footer {
@@ -186,12 +186,14 @@ footer {
     text-align: center;
     line-height: 1.5em;
     background-color: #d2effe;
-    margin-top: 100px;
+    /* margin-top: 100px; */
 }
 
 address {
+    margin-top: 100px;
     padding: 60px;
     color: mediumslateblue;
+    margin: 0;
 }
 
 address a {
