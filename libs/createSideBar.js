@@ -10,6 +10,14 @@
     });
   }
 
+  $('.nav-all-rates').click(function(event) {
+    console.log("nav all rates function ran");
+    event.preventDefault();
+    // $('.nav-all-rates').addClass('active');
+    $('.dropdown').show();
+
+  })
+
   function showSideBarWalk() {
     console.log("showSideBarWalk function ran");
     $('.nav-all-rates').addClass('active');
@@ -23,7 +31,10 @@
         } else if (!$('#walk').hasClass('highlight')) {
           generateWalkRates();
         };
-    }
+    };
+    if (window.innerHeight > 620) {
+      window.scrollTo(0, 300);
+    } 
   };
 
   function walkSection() {
@@ -39,6 +50,7 @@
       console.log("showWalkRatesNav function ran");
       event.preventDefault();
       showSideBarWalk();
+      $('.dropdown').hide();
     });
   };
 
@@ -104,6 +116,7 @@
       console.log("showRunRatesNav function ran");
       event.preventDefault();
       showSideBarRun();
+      $('.dropdown').hide();
       
       
     });
@@ -168,6 +181,7 @@
       console.log("showHikeRatesNav function ran");
       event.preventDefault();
       showSideBarHike();
+      $('.dropdown').hide();
     });
   };
 
@@ -222,6 +236,7 @@
       console.log("showSitRatesNav function ran");
       event.preventDefault();
       showSideBarSit();
+      $('.dropdown').hide();
     });
   };
 
