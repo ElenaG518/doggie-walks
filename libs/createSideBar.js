@@ -5,16 +5,15 @@
       console.log("goHome function ran");
       event.preventDefault();
       $('.nav-home').addClass('active');
-      $('.nav-running, .nav-hiking, .nav-walking, .nav-sitting, .nav-contact').removeClass('active');
+      $('.nav-all-rates, .nav-contact').removeClass('active');
       $('.sidebar').addClass('hide');
     });
   }
 
-
   function showSideBarWalk() {
     console.log("showSideBarWalk function ran");
-    $('.nav-walking').addClass('active');
-    $('.nav-home, .nav-hiking, .nav-running, .nav-sitting, .nav-contact').removeClass('active');
+    $('.nav-all-rates').addClass('active');
+    $('.nav-home, .nav-contact').removeClass('active');
     if ($('.sidebar').hasClass('hide')) {
         $('.sidebar').removeClass('hide');
         generateWalkRates();
@@ -75,8 +74,8 @@
   
   function showSideBarRun() {
     console.log("showSideBarRun function ran");
-    $('.nav-running').addClass('active');
-    $('.nav-home, .nav-hiking, .nav-walking, .nav-sitting, .nav-contact').removeClass('active');
+    $('.nav-all-rates').addClass('active');
+    $('.nav-home, .nav-contact').removeClass('active');
     if ($('.sidebar').hasClass('hide')) {
         $('.sidebar').removeClass('hide');
         generateRunRates();
@@ -86,6 +85,9 @@
         } else if (!$('#run').hasClass('highlight')) {
             generateRunRates();
         };
+    };
+    if (window.innerWidth < 420) {
+      window.scrollTo(0, 620);
     }
   };
 
@@ -102,6 +104,8 @@
       console.log("showRunRatesNav function ran");
       event.preventDefault();
       showSideBarRun();
+      
+      
     });
   };
 
@@ -134,8 +138,8 @@
 
   function showSideBarHike() {
     console.log("showSideBarHike function ran");
-    $('.nav-hiking').addClass('active');
-    $('.nav-home, .nav-running, .nav-walking, .nav-sitting, .nav-contact').removeClass('active');
+    $('.nav-all-rates').addClass('active');
+    $('.nav-home, .nav-contact').removeClass('active');
     if ($('.sidebar').hasClass('hide')) {
           $('.sidebar').removeClass('hide');
           generateHikeRates();
@@ -145,6 +149,9 @@
         } else if (!$('#hike').hasClass('highlight')) {
           generateHikeRates();
         };
+    };
+    if (window.innerWidth < 420) {
+      window.scrollTo(0, 620);
     }
   };
 
@@ -183,8 +190,8 @@
 
   function showSideBarSit() {
     console.log("showSideBarSit function ran");
-    $('.nav-sitting').addClass('active');
-      $('.nav-home, .nav-running, .nav-walking, .nav-hiking, .nav-contact').removeClass('active');
+    $('.nav-all-rates').addClass('active');
+      $('.nav-home, .nav-contact').removeClass('active');
     if ($('.sidebar').hasClass('hide')) {
         $('.sidebar').removeClass('hide');
         generateSitRates();
@@ -194,6 +201,11 @@
         } else if (!$('#sit').hasClass('highlight')) {
           generateSitRates();
         };
+    };
+    if (window.innerWidth < 420) {
+      window.scrollTo(0, 620);
+    } else {
+        window.scrollTo(0,0);
     }
   };
 
@@ -224,7 +236,7 @@
     </table>
 
     <p>* $10 per each additional pet.</p>
-    <p>**$5 for administration of medication.</p>
+    
     </section>`);
   };
 
@@ -233,7 +245,7 @@
   function showSideBarContact() {
     console.log("showSideBarContact function ran");
     $('.nav-contact').addClass('active');
-      $('.nav-home, .nav-running, .nav-walking, .nav-hiking, .nav-sitting').removeClass('active');
+      $('.nav-home, .nav-all-rates').removeClass('active');
     if ($('.sidebar').hasClass('hide')) {
         $('.sidebar').removeClass('hide');
         generateContactInfo();
@@ -243,6 +255,9 @@
         } else if (!$('#contact').hasClass('highlight')) {
           generateContactInfo();
         };
+    };
+    if (window.innerWidth < 420) {
+      window.scrollTo(0, 620);
     }
   }
 
@@ -265,17 +280,7 @@
     </section>`);
   }
 
-  function myFunction() {
-    var x = document.getElementById("myTopnav");
-    console.log(x);
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-  }
-
-
+  
 function createRates() {
   walkSection();
   showWalkRatesNav();

@@ -27,19 +27,23 @@
 
         <section class="nav-color">
             <div class="nav-container">
-                <div class="topnav" id="myTopnav">
-                    <a href="#home" class="active nav-home">Home</a>
-                    <a href="#walk" class="nav-walking">Dog Walking Rates</a>
-                    <a href="#run" class="nav-running">Dog Running Rates</a>
-                    <a href="#hike" class="nav-hiking">Dog Hiking Rates</a>
-                    <a href="#sit" class="nav-sitting">Pet-sitting Rates</a>
-                    <a href="#contact" class="nav-contact">Contact me</a>
-                    <!--  <a href="#about">About</a>  -->
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                        <i class="fa fa-bars"></i></a>
-                </div>
+                <nav role="navigation" class="topnav" id="myTopnav">
+                    <ul>
+                        <li><a href="#home" class="active nav-home">Home</a></li>
+                        <li><a href="#allRates" class="nav-all-rates">Rates</a>
+                            <ul class="dropdown">
+                                <li><a href="#walk" class="nav-walking">Dog Walking</a></li>
+                                <li><a href="#run" class="nav-running">Dog Running</a></li>
+                                <li><a href="#hike" class="nav-hiking">Dog Hiking</a></li>
+                                <li><a href="#sit" class="nav-sitting">Pet-sitting</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#contact" class="nav-contact">Contact me</a></li>
+                    </ul>
+                </nav>
             </div>
         </section>
+
 
         <div class="content">
 
