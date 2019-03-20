@@ -5,7 +5,7 @@ Homepage for my dog-walking and pet-sitting business
 ![](https://github.com/ElenaG518/doggie-walks/blob/master/images/cropped/homepage.png)  
 
 ## Live Link
-You can access a working prototype of the app here: https://my-doggie-walks.fun/
+You can access a working prototype of the app here: https://elenasdoggiewalks.com
 
 ## Technology
 * Front-End: HTML5 | CSS3 | JavaScript ES6 | jQuery
