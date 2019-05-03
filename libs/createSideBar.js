@@ -1,15 +1,13 @@
 'use strict'
 
-  function goHome() {
-    $('a.nav-home').click(function(event) {
-      console.log("goHome function ran");
-      event.preventDefault();
-      $('.nav-home').addClass('active');
-      $('.nav-all-rates, .nav-contact').removeClass('active');
-      $('.sidebar').addClass('hide');
-    });
-  }
-
+  $('a.nav-home').click(function(event) {
+    console.log("goHome function ran");
+    event.preventDefault();
+    $('.nav-home').addClass('active');
+    $('.nav-all-rates, .nav-contact').removeClass('active');
+    $('.sidebar').addClass('hide');
+  });
+  
   $('.nav-all-rates').click(function(event) {
     console.log("nav all rates function ran");
     event.preventDefault();
@@ -80,8 +78,6 @@
         <p>* $5 per each additional dog </p>`);
   };
 
-
-  
   function showSideBarRun() {
     console.log("showSideBarRun function ran");
     $('.nav-all-rates').addClass('active');
@@ -114,37 +110,32 @@
       event.preventDefault();
       showSideBarRun();
       $('.dropdown').hide();
-      
-      
     });
   };
 
   function generateRunRates() {
-       $('#rates').html(`<section id="run" class="highlight">
-          <table>
-          <caption>Dog Runs</caption>
-          <tr>
+    $('#rates').html(`<section id="run" class="highlight">
+      <table>
+        <caption>Dog Runs</caption>
+        <tr>
           <th>duration</th>
           <th>fee</th>
-          </tr>
-          <tr>
+        </tr>
+        <tr>
           <th>15 minutes</th>
           <th>$20</th>
-          </tr>
-          <tr>
+        </tr>
+        <tr>
           <th>20 minutes</th>
           <th>$25</th>
-          </tr>
-          <tr>
+        </tr>
+        <tr>
           <th>30 minutes</th>
           <th>$35</th>
-          </tr>
-          </table>
-
-          <p> * $5 per each additional dog</p>`);
-        };
-
-
+        </tr>
+      </table>
+      <p> * $5 per each additional dog</p>`);
+    };
 
   function showSideBarHike() {
     console.log("showSideBarHike function ran");
@@ -196,8 +187,6 @@
     <p>*food and treats must be provided by owner for the safety of your pet.</p> </section>`);
   };
 
-  
-
   function showSideBarSit() {
     console.log("showSideBarSit function ran");
     $('.nav-all-rates').addClass('active');
@@ -241,16 +230,15 @@
       <caption>In-Home Pet-Sitting / House Sitting</caption>
       <tr>
       <td>Pet sitting</td>
-      <td>$65 per day</td>
+      <td>$75 per day</td>
       </tr>
     </table>
 
     <p>* $10 per each additional pet.</p>
+    <p>* $20 extra for overnight stays
     
     </section>`);
-  };
-
-  
+  };  
 
   function showSideBarContact() {
     console.log("showSideBarContact function ran");
@@ -314,7 +302,6 @@ function myFunction() {
   }
 }
 
-  
 function createRates() {
   walkSection();
   showWalkRatesNav();
@@ -325,8 +312,6 @@ function createRates() {
   sitSection();
   showSitRatesNav();
   showContactNav();
-  goHome();
-
 }
 
 $(createRates);
